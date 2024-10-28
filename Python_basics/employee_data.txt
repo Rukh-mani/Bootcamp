@@ -1,0 +1,3 @@
+John Doe, 35, Manager
+Mary Jane, 28, Accountant
+johny walker, 34, senior engineer
