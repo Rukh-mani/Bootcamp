@@ -1,3 +1,6 @@
-This is a sample text file.
-It contains multiple words.
-Counting words can be fun!
+John Doe,85
+Jane Smith,92
+Michael Johnson,78
+Emily Davis,95
+David Lee,87
+Sarah Wilson,91
