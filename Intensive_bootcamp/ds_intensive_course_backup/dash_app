@@ -1,0 +1,30 @@
+import dash
+import dash_html_components as html
+from dash.dependencies import Input, Output
+import dash_bootstrap_components as dbc
+
+# Initialize the Dash app
+app = dash.Dash(__name__)
+
+# Define the layout
+app.layout = html.Div([
+    html.H1("Simple Dash App"),
+    html.Button("Press Me", id='my-button'),
+    dbc.Button("Press me but pretty", color="primary", className="me-1"),
+    html.Div(id='output-container')
+])
+
+# Define callback to update output when button is pressed
+@app.callback(
+    Output('output-container', 'children'),
+    [Input('my-button', 'n_clicks')]
+)
+def update_output(n_clicks):
+    if n_clicks is None:
+        return "Press the button!"
+    else:
+        return f"Hello, World! Button pressed {n_clicks} times."
+
+# Run the app in Jupyter Notebook
+if __name__ == '__main__':
+    app.run_server(debug='true')
